@@ -1,0 +1,14 @@
+<h1><%= @user.username %></h1>
+
+<p>Hello, dear user!</p>
+
+<form method="/api/photos" action="POST">
+  <input
+    name="authenticity_token"
+    type="hidden"
+    value="<%= form_authenticity_token %>">
+
+    title: <input name="photo[title]"><br>
+    url: <input name="photo[url]">
+    <input type="submit" value="Create photo!">
+</form>
